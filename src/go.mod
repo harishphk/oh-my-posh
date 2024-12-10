@@ -21,7 +21,7 @@ require (
 	github.com/wayneashleyberry/terminal-dimensions v1.1.0
 	golang.org/x/crypto v0.26.0 // indirect
 	golang.org/x/image v0.23.0
-	golang.org/x/sys v0.27.0
+	golang.org/x/sys v0.28.0
 	golang.org/x/text v0.21.0
 	gopkg.in/ini.v1 v1.67.0
 )
@@ -33,7 +33,7 @@ require (
 	github.com/charmbracelet/lipgloss v1.0.0
 	github.com/goccy/go-json v0.10.3
 	github.com/goccy/go-yaml v1.11.3
-	github.com/gookit/goutil v0.6.17
+	github.com/gookit/goutil v0.6.18
 	github.com/hashicorp/hcl/v2 v2.23.0
 	github.com/mattn/go-runewidth v0.0.16
 	github.com/pelletier/go-toml/v2 v2.2.3

@@ -27,7 +27,7 @@ require (
 )
 
 require (
-	github.com/ConradIrwin/font v0.0.0-20210318200717-ce8d41cc0732
+	github.com/ConradIrwin/font v0.2.1
 	github.com/charmbracelet/bubbles v0.20.0
 	github.com/charmbracelet/bubbletea v1.2.4
 	github.com/charmbracelet/lipgloss v1.0.0

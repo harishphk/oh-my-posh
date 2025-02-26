@@ -22,7 +22,7 @@ require (
 	golang.org/x/crypto v0.26.0 // indirect
 	golang.org/x/image v0.23.0
 	golang.org/x/sys v0.30.0
-	golang.org/x/text v0.21.0
+	golang.org/x/text v0.22.0
 	gopkg.in/ini.v1 v1.67.0
 )
 

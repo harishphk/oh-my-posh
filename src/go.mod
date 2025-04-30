@@ -22,7 +22,7 @@ require (
 	github.com/wayneashleyberry/terminal-dimensions v1.1.0
 	golang.org/x/crypto v0.26.0 // indirect
 	golang.org/x/image v0.26.0
-	golang.org/x/sys v0.30.0
+	golang.org/x/sys v0.32.0
 	golang.org/x/text v0.24.0
 	gopkg.in/ini.v1 v1.67.0
 )
@@ -30,7 +30,7 @@ require (
 require (
 	github.com/ConradIrwin/font v0.2.1
 	github.com/charmbracelet/bubbles v0.21.0
-	github.com/charmbracelet/bubbletea v1.3.4
+	github.com/charmbracelet/bubbletea v1.3.5
 	github.com/charmbracelet/lipgloss v1.1.0
 	github.com/goccy/go-json v0.10.5
 	github.com/goccy/go-yaml v1.11.3

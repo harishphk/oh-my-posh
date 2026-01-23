@@ -10,7 +10,7 @@ jobs:
         working-directory: ${{ github.workspace }}/src
     steps:
     - name: Checkout code
-      uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+      uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
     - name: Install Go 🗳
       uses: ./.github/workflows/composite/bootstrap-go
     - name: Check for unused dependencies

@@ -34,7 +34,7 @@ require (
 	github.com/goccy/go-json v0.10.5
 	github.com/gookit/goutil v0.7.3
 	github.com/hashicorp/hcl/v2 v2.24.0
-	github.com/mattn/go-runewidth v0.0.19
+	github.com/mattn/go-runewidth v0.0.20
 	github.com/pelletier/go-toml/v2 v2.2.4
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/pflag v1.0.10

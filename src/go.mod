@@ -1,6 +1,6 @@
 module github.com/jandedobbeleer/oh-my-posh/src
 
-go 1.24.2
+go 1.25.0
 
 require (
 	github.com/Azure/go-ansiterm v0.0.0-20250102033503-faa5f7b0171c
@@ -20,9 +20,9 @@ require (
 	github.com/stretchr/testify v1.11.1
 	github.com/wayneashleyberry/terminal-dimensions v1.1.0
 	golang.org/x/crypto v0.38.0 // indirect
-	golang.org/x/image v0.36.0
-	golang.org/x/sys v0.41.0
-	golang.org/x/text v0.34.0
+	golang.org/x/image v0.37.0
+	golang.org/x/sys v0.42.0
+	golang.org/x/text v0.35.0
 	gopkg.in/ini.v1 v1.67.1
 )
 
@@ -34,11 +34,11 @@ require (
 	github.com/goccy/go-json v0.10.5
 	github.com/gookit/goutil v0.7.3
 	github.com/hashicorp/hcl/v2 v2.24.0
-	github.com/mattn/go-runewidth v0.0.19
+	github.com/mattn/go-runewidth v0.0.21
 	github.com/pelletier/go-toml/v2 v2.2.4
 	github.com/spf13/cobra v1.10.2
 	github.com/spf13/pflag v1.0.10
-	golang.org/x/mod v0.33.0
+	golang.org/x/mod v0.34.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
@@ -91,8 +91,8 @@ require (
 	github.com/yusufpapurcu/wmi v1.2.4 // indirect
 	github.com/zclconf/go-cty v1.16.3 // indirect
 	golang.org/x/exp v0.0.0-20241217172543-b2144cdd0a67 // indirect
-	golang.org/x/sync v0.19.0 // indirect
-	golang.org/x/tools v0.41.0 // indirect
+	golang.org/x/sync v0.20.0 // indirect
+	golang.org/x/tools v0.42.0 // indirect
 )
 
 replace github.com/atotto/clipboard v0.1.4 => github.com/jandedobbeleer/clipboard v0.1.4-1

@@ -19,10 +19,10 @@ jobs:
       skipped: ${{ steps.changelog.outputs.skipped }}
     steps:
       - name: Checkout code 👋
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
       - name: Create changelog ✍️
         id: changelog
-        uses: TriPSs/conventional-changelog-action@84dadaf2c367cb52af02737cd9c7e888807219e7
+        uses: TriPSs/conventional-changelog-action@952b14bbc4be87e8458a6ac5926fc655608b1b19
         with:
           github-token: ${{ secrets.github_token }}
           skip-version-file: "true"
@@ -41,7 +41,7 @@ jobs:
         working-directory: ${{ github.workspace }}/build
     steps:
       - name: Checkout code 👋
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
       - name: Install Go 🗳
         uses: ./.github/workflows/composite/bootstrap-go
       - name: Pre Build 😸
@@ -50,7 +50,7 @@ jobs:
         run: |
           ./pre.ps1 -Version ${{ needs.changelog.outputs.version }}
       - name: Run GoReleaser 🚀
-        uses: goreleaser/goreleaser-action@ec59f474b9834571250b370d4735c50f8e2d1e29
+        uses: goreleaser/goreleaser-action@5daf1e915a5f0af01ddbcd89a43b8061ff4f1a89
         with:
           distribution: goreleaser
           version: v2.3.2
@@ -63,7 +63,7 @@ jobs:
       - name: Post Build 🤐
         run: |
           ./post.ps1
-      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: build-artifacts
           path: |
@@ -84,8 +84,8 @@ jobs:
         working-directory: ${{ github.workspace }}/packages/msi
     steps:
       - name: Checkout code 👋
-        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd
-      - uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
         with:
           name: build-artifacts
           path: dist
@@ -100,7 +100,7 @@ jobs:
         run: |
           $version = '${{ needs.changelog.outputs.version }}'.TrimStart("v")
           ./build.ps1 -Architecture ${{ matrix.arch }}  -Version $version -Copy -Sign
-      - uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         with:
           name: msi-artifact-${{ matrix.arch }}
           path: |
@@ -113,7 +113,7 @@ jobs:
       - artifacts
       - msi
     steps:
-      - uses: actions/download-artifact@70fc10c6e5e1ce46ad2ea6f2b72d43f7d47b13c3
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c
         with:
           merge-multiple: true
       - name: Upload version file
@@ -124,7 +124,7 @@ jobs:
           az storage blob upload-batch --destination v${{ needs.changelog.outputs.version }} --source .
           az storage blob upload-batch --destination latest --overwrite true --source .
       - name: Release 🎓
-        uses: softprops/action-gh-release@a06a81a03ee405af7f2048a818ed3f03bbf83c7b
+        uses: softprops/action-gh-release@b4309332981a82ec1c5618f44dd2e27cc8bfbfda
         with:
           tag_name: ${{ needs.changelog.outputs.tag }}
           body: ${{ needs.changelog.outputs.body }}
